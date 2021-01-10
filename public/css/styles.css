@@ -1,0 +1,303 @@
+body {
+    text-align: center;
+    font-family: 'helvetica neue';
+}
+
+/* ----- HOME PAGE ----- */
+.page-background {
+    background-image: url('../images/desk-background.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 100vh;
+    padding-top: 100px;
+}
+
+.home-page-container {
+    max-width: 650px;
+    margin: auto;
+    border-radius: 15px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding: 25px 20px;
+    font-family: 'Rubik', sans-serif;
+    background: rgba(240, 240, 240, 0.9);
+}
+
+.btn-outline {
+    color: rgb(15, 15, 15);
+    border: rgb(15, 15, 15) 1px solid;
+}
+
+.btn-outline:hover {
+    background-color: rgb(15, 15, 15);
+    color: rgb(240, 240, 240);
+}
+
+.home-page-container h1 {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.home-page-container p {
+    font-size: 18px;
+}
+
+.instructions-container {
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+/* ----- CREATE LIST/FIND LIST PAGES ----- */
+.input-container {
+    max-width: 650px;
+    margin: auto;
+    border-radius: 15px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding: 25px 20px 15px 20px;
+    font-family: 'Rubik', sans-serif;
+    background: rgba(240, 240, 240, 0.9);
+}
+
+.list-index-title-container {
+    display: grid;
+    grid-template-columns: 80px auto 80px;
+}
+
+.no-lists-text {
+    font-size: 22px;
+}
+
+.list {
+    font-size: 22px;
+    color: black;
+}
+
+.list:hover {
+    color: grey;
+}
+
+/* ----- LIST PAGE ----- */
+.list-page-background {
+    background-image: url('../images/desk-background.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 100vh;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.list-wrapper {
+    max-width: 650px;
+    margin: auto;
+    padding: 0;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 15px;
+    font-family: 'Rubik', sans-serif;
+}
+
+.list-name-container {
+    color: white;
+    background: rgb(49, 93, 33, 0.9);
+    margin: 0;
+    padding: 10px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    position: relative;
+    display: grid;
+    grid-template-columns: 60px auto 60px;
+}
+
+.flex-col {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-btn {
+    color: white;
+}
+
+.home-btn:hover {
+    color: grey;
+}
+
+.delete-list-btn {
+    background: none;
+    color: white;
+    border: none;
+}
+
+.delete-list-btn:hover {
+    color: grey;
+}
+
+.list-name-container input {
+    background: none;
+    border: none;
+    color: white;
+}
+
+.list-name {
+    display: inline-block;
+}
+
+.list-name:hover {
+    cursor: pointer;
+}
+
+.add-item-wrapper {
+    margin: auto;
+    padding: 14px 0;
+    background: rgb(240, 240, 240, 0.9);
+}
+
+.add-item-container {
+    display: inline-block;
+    border-radius: 15px;
+    padding: 5px 10px;
+    background: white;
+}
+
+.add-item-input {
+    text-align: center;
+    border: none;
+    padding: 5px;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.add-item-input:focus {
+    outline: none;
+    border-bottom: 2px solid rgb(200, 200, 200);
+}
+
+.add-item-btn {
+    display: inline-block;
+    color: rgb(49, 93, 33, 0.9);
+    border: none;
+    background: none;
+    text-align: center;
+    padding: 5px;
+}
+
+.add-item-btn:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.delete-items-btn {
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+    padding: 0;
+    border: none;
+}
+
+.label-container {
+    background-color: rgb(49, 93, 33, 0.9);
+    color: white;
+    display: grid;
+    padding: 5px 15px 5px 0;
+    grid-template-columns: 50px auto 100px;
+    font-size: 18px;
+}
+
+.empty-list-container {
+    padding: 10px;
+    font-size: 20px;
+    border-bottom: 1px solid rgb(200, 200, 200);
+    background: rgb(240, 240, 240, 0.9);
+    margin: auto;
+}
+
+.list-container {
+    display: grid;
+    padding: 10px 15px 10px 0;
+    grid-template-columns: 50px auto 100px;
+    font-size: 20px;
+    border-bottom: 1px solid rgb(200, 200, 200);
+    background: rgb(240, 240, 240, 0.9);
+    margin: auto;
+}
+
+.c2 {
+    text-align: left;
+}
+
+.c3 {
+    text-align: right;
+}
+
+.edit-btn {
+    border: none;
+    color: grey;
+}
+
+.change-cancel-container {
+    display: inline-block;
+}
+
+.list-form {
+    display: inline-block;
+}
+
+.delete-btn {
+    color: grey;
+    border: none;
+}
+
+.delete-btn:hover {
+    cursor: pointer;
+}
+
+.list-form:last-of-type .list-container {
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+/* ----- LIST INPUTS FOR EDITS ----- */
+.title-edit {
+    width: 100%;
+}
+
+.edit-item-input {
+    width: 100%;
+    max-width: 236px;
+}
+
+@media (max-width: 338px) {
+    .change-itemName-btn {
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 450px) {
+    .list-page-background {
+        padding-top: 0px;
+    }
+
+    .list-wrapper h1 {
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+    } 
+
+    .list-form:last-of-type .list-container {
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+}
+
+@media (max-width: 420px) {
+    .logout-btn {
+        font-size: 10px;
+    }
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.gone {
+    display: none;
+}
+
+.line-through {
+    text-decoration: line-through;
+}

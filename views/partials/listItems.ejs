@@ -1,0 +1,31 @@
+<% items.forEach(function(item, index) { %>
+
+<div class="list-container">
+    <div class="c1">
+        <input type="checkbox" class="checkbox" value="<%=index%>" <% if (item.checked) { %> checked <% } %>>
+    </div>
+    <div class="c2">
+        <div class="list-item item-<%=index%>"><%= item.name %></div>
+
+        <div class="edit-item-<%=index%> gone">
+            <form action="/lists/<%= listId %>/edit?_method=PATCH" method="POST">
+                <input type="text" name="newName" class="edit-item-input edit-input-<%=index%> mb-2" placeholder="<%= item.name %>" value="">
+                <input type="hidden" name="itemId" value="<%= item._id%>" id="itemId-<%=index%>">
+                <div class="change-cancel-container">
+                    <button type="submit" class="change-name-btn change-itemName-btn btn btn-outline mr-2">Change</button>
+                    <a href="/lists/<%= listId %>"><button type="button" class="btn btn-outline">Cancel</button></a>
+                </div>
+
+            </form>
+        </div>
+    </div>
+    <div class="c3">
+        <button class="edit-btn" value="<%= index%>"><i class="fas fa-edit"></i></button>
+        <form action="/lists/<%= listId %>/edit?_method=DELETE" class="list-form" method="POST">
+            <input type="hidden" name="itemId" value="<%= item._id%>">
+            <button class="delete-btn" type="submit"><i class="fas fa-trash"></i></button>
+        </form>
+    </div>
+</div>
+
+<% }) %>

@@ -1,0 +1,101 @@
+<%- include("../partials/header"); -%> 
+
+<body>
+    <div class="list-page-background">
+        <div class="list-wrapper">
+            <div class="text-center list-name-container">
+                <div class="flex-col">
+                    <a href="/lists" class="home-btn"><i class="fas fa-home fa-2x"></i></a>
+                </div>
+                <div class="middle-col">
+                    <input type="hidden" value="<%= listId %>" id="listId">
+                    <form action="/lists/<%= listId %>?_method=PUT" method="POST" >
+                        <h1 class="list-name"><%= name %></h1> 
+                        <div class="change-name-btn-container gone">
+                            <h1><input type="text" name="newName" class="title-edit text-center" placeholder="<%= name %>" value=""></h1>
+                            <div class="change-cancel-container">
+                                <button type="submit" class="change-name-btn btn btn-outline-light mr-2">Change</button>
+                                <a href="/lists/<%= listId %>"><button type="button" class="btn btn-outline-light">Cancel</button></a>
+                            </div> 
+                        </div>
+                    </form>
+                </div>
+                <div class="flex-col">
+                    <button type="button" class="delete-list-btn" data-toggle="modal"
+                        data-target="#exampleModalCenter"><i class="fas fa-trash fa-2x"></i></button>
+                </div>
+                
+            </div>
+
+            <div class="add-item-wrapper">
+                <div class="add-item-container">
+                    <form action="/lists/<%= listId %>/edit" method="POST">
+                        <input class="add-item-input" type="text" placeholder="Add item" name="newItem">
+                        <button type="submit" class="add-item-btn" id="add-item-btn">
+                            <i class="fas fa-plus fa-lg"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="label-container">
+                <div class="c1">
+                </div>
+                <div class="c2">
+                    <div>Items</div>
+                </div>
+                <div class="c3">
+                        <button type="submit" data-toggle="modal" data-target="#exampleModalCenter" class="delete-items-btn">Clear Items</button> 
+                </div>
+            </div>
+
+            <% if (items.length === 0) { %>
+            <div class="empty-list-container">
+                <div>There are no items in your list</div>
+            </div>
+            <% } %>
+
+            <%- include("../partials/listItems"); -%> 
+            
+        </div>
+
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+            aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header"> 
+                        <h5 class="modal-title" id="exampleModalLongTitle">Are you sure you want to delete this list?
+                        </h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                   </div> 
+                    <div class="modal-body"> 
+                        <form class="modal-form" data-list-id="<%= listId %>" action="" method="POST">
+                            <button type="submit" class="btn btn-secondary mr-4">Yes</button>
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
+    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.0/axios.min.js" integrity="sha512-DZqqY3PiOvTP9HkjIWgjO6ouCbq+dxqWoJZ/Q+zPYNHmlnI2dQnbJ5bxAHpAMw+LXRm4D72EIRXzvcHQtE8/VQ==" crossorigin="anonymous"></script>
+    <script src="/scripts/lists.js"></script>
+</body>
+
+</html>
