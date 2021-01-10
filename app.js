@@ -27,7 +27,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 app.use(flash());
 
-mongoose.connect('mongodb://localhost:27017/ultimatelistDB', {
+mongoose.connect(`mongodb+srv://admin-mark:${process.env.PASSWORD}@cluster723.acyoj.gcp.mongodb.net/ultimatelistDB?retryWrites=true&w=majority`, {
     useNewUrlParser: true,
     useUnifiedTopology: true
 });
