@@ -228,6 +228,7 @@ body {
 .edit-btn {
     border: none;
     color: grey;
+    display: inline-block;
 }
 
 .change-cancel-container {
@@ -241,6 +242,7 @@ body {
 .delete-btn {
     color: grey;
     border: none;
+    display: inline-block;
 }
 
 .delete-btn:hover {
