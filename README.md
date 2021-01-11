@@ -1,6 +1,6 @@
 # Ulitmate List App
 
-<img src="./readmeImages/listIndexView.png" alt="location of create note button" width="500px" height="250px">
+<img src="./readmeImages/listIndexView.png" alt="App picture" width="500px" height="250px">
 
 ## Description 
 This application allows the user to create an account, make lists, and edit those lists.  The lists are saved to a database and can be accessed from any where as long as the user remembers their username and password.  The application is also mobile responsive and works well on both desktop and moblie devices. This application is built on an express server, MongoDB database, and uses ejs templating on the front end.  Passport.js was used to create the authentication process for the user.     
@@ -71,29 +71,38 @@ node app.js
 1.  On the home page, click the 'Make Account' button.
 2.  Create a user name and password and submit the form.  That's it, your account is created.  
 
-<img src="./readmeImages/listIndexView.png" alt="location of create note button" width="500px" height="250px">
+<img src="./readmeImages/createAccountPage.png" alt="make account page" width="250px" height="100px">
 
 #### Create A New List 
 1.  After logining in, click the create list 'New List' button.
 2.  Fill out the input to create a list title.  
 
+<img src="./readmeImages/listIndexViewNewList.png" alt="create new list page" width="250px" height="100px">
+
 #### Add Items
 1.  Simply type in the name of the item you would like to add to the add item section on the list.  
 2.  Hit enter or the + button and the item will be deleted from the list.  
+
+<img src="./readmeImages/addItem.png" alt="location of add items button" width="250px" height="100px">
 
 #### Delete Items
 1.  Click the trash can on the next to the list item you would like to delete.
 2.  You can also delete all items in a list by clicking 'Clear Items' on the list page. 
 
+<img src="./readmeImages/deleteItem.png" alt="location of delete items button" width="250px" height="100px">
+
 #### Delete lists
 1.  On the list index page, click the delete button next to the list you would like to delete.
 2.  On the list page, click the trash can icon.
+
+<img src="./readmeImages/deleteList.png" alt="location of create note button" width="250px" height="100px">
 
 #### Update lists
 1.  On the list index page, click edit to rename the list.  
 2.  On the list page, click on the list title to edit it.
 3.  On the list page, click the pencil to edit list items.  
 
+<img src="./readmeImages/editItem.png" alt="location of item edit button" width="250px" height="100px">
 
 ## Questions
 [My Github](https://github.com/MarkMulligan97) || mark.mulligan.jr1@gmail.com
