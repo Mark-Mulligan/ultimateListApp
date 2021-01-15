@@ -3,15 +3,15 @@
 <img src="./readmeImages/listIndexView.png" alt="App picture" width="500px" height="250px">
 
 ## Description 
-This application allows the user to create an account, make lists, and edit those lists.  The lists are saved to a database and can be accessed from any where as long as the user remembers their username and password.  The application is also mobile responsive and works well on both desktop and moblie devices. This application is built on an express server, MongoDB database, and uses ejs templating on the front end.  Passport.js was used to create the authentication process for the user.     
+This application allows the user to create an account, make lists, and edit those lists. The lists are saved to a database and can be accessed from any where as long as the user remembers their username and password. The application is also mobile responsive and works well on both desktop and moblie devices. This application is built on an express server, MongoDB database, and uses ejs templating on the front end. Passport.js was used to create the authentication process for the user.    
 
 #### Built With
-Node.js
-Express.js
-MongoDB
-Mongoose.js
-Bootstrap 
-EJS templates
+* Node.js 
+* Express.js 
+* MongoDB 
+* Mongoose.js 
+* Bootstrap 
+* EJS templates
 
 ## Table of Contents
   
